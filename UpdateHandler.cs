@@ -17,7 +17,7 @@ namespace TelegramTestBot
 
                 if (message.Text.ToLower() == "/start")
                 {
-                    await botClient.SendTextMessageAsync(message.Chat, $"Сообщение отправлено. Username пользователя: {userName}");
+                    await botClient.SendTextMessageAsync(message.Chat.Id, $"Пользователь {userName} запустил бота!");
                     Console.WriteLine($"Сообщение отправлено. Username пользователя: {userName}");
                 }
             }
